@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlansGarant - Professionele Autopoets Service</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Custom styles to apply the Inter font */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Simple animation for cards */
+        .service-card, .gallery-item {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .service-card:hover, .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Header & Navigation -->
+    <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50 shadow-lg shadow-blue-500/10">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold text-white">
+                <i class="fas fa-car-side text-blue-500"></i> Glans<span class="text-blue-500">Garant</span>
+            </a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#diensten" class="hover:text-blue-400 transition duration-300">Diensten</a>
+                <a href="#gallerij" class="hover:text-blue-400 transition duration-300">Gallerij</a>
+                <a href="#over-ons" class="hover:text-blue-400 transition duration-300">Over Ons</a>
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition duration-300 shadow-md">Contact</a>
+            </div>
+            <div class="md:hidden">
+                 <button id="menu-btn" class="text-white focus:outline-none">
+                     <i class="fas fa-bars text-2xl"></i>
+                 </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#diensten" class="block py-2 px-4 text-sm hover:bg-gray-700">Diensten</a>
+            <a href="#gallerij" class="block py-2 px-4 text-sm hover:bg-gray-700">Gallerij</a>
+            <a href="#over-ons" class="block py-2 px-4 text-sm hover:bg-gray-700">Over Ons</a>
+            <a href="#contact" class="block py-2 px-4 text-sm hover:bg-gray-700">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="relative h-[60vh] md:h-[80vh] flex items-center justify-center text-center bg-cover bg-center" style="background-image: url('https://placehold.co/1920x1080/000000/FFFFFF?text=Glinsterende+Zwarte+Sportauto');">
+            <div class="absolute inset-0 bg-black opacity-60"></div>
+            <div class="relative z-10 px-4">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4">De Perfecte Glans, Gegarandeerd.</h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Wij brengen uw auto terug in showroomstaat met passie voor perfectie en oog voor detail.</p>
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg">Maak een Afspraak</a>
+            </div>
+        </section>
+
+        <!-- Diensten (Services) Section -->
+        <section id="diensten" class="py-20 bg-gray-800">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold mb-2">Onze Diensten</h2>
+                    <p class="text-gray-400">Kies het pakket dat het beste bij uw wensen past.</p>
+                    <div class="w-24 h-1 bg-blue-500 mx-auto mt-4"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Card 1: Interieur -->
+                    <div class="service-card bg-gray-900 rounded-lg p-8 text-center shadow-lg">
+                        <div class="text-5xl text-blue-500 mb-4"><i class="fas fa-couch"></i></div>
+                        <h3 class="text-2xl font-bold mb-3">Interieur Reiniging</h3>
+                        <p class="text-gray-400 mb-4">Dieptereiniging van stoelen, tapijten, dashboard en alle hoekjes. Fris en als nieuw.</p>
+                        <p class="text-2xl font-semibold text-blue-400">Vanaf €89</p>
+                    </div>
+                    <!-- Service Card 2: Exterieur -->
+                    <div class="service-card bg-gray-900 rounded-lg p-8 text-center shadow-lg border-2 border-blue-500">
+                         <div class="absolute top-0 right-0 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">Populair</div>
+                        <div class="text-5xl text-blue-500 mb-4"><i class="fas fa-magic-wand-sparkles"></i></div>
+                        <h3 class="text-2xl font-bold mb-3">Exterieur Deluxe</h3>
+                        <p class="text-gray-400 mb-4">Wassen, kleien, polijsten en waxen voor een diepe glans en langdurige bescherming.</p>
+                        <p class="text-2xl font-semibold text-blue-400">Vanaf €149</p>
+                    </div>
+                    <!-- Service Card 3: Compleet -->
+                    <div class="service-card bg-gray-900 rounded-lg p-8 text-center shadow-lg">
+                        <div class="text-5xl text-blue-500 mb-4"><i class="fas fa-gem"></i></div>
+                        <h3 class="text-2xl font-bold mb-3">Showroom Pakket</h3>
+                        <p class="text-gray-400 mb-4">De ultieme behandeling. Complete interieur- en exterieurverzorging voor de veeleisende klant.</p>
+                        <p class="text-2xl font-semibold text-blue-400">Vanaf €229</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallerij (Gallery) Section -->
+        <section id="gallerij" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold mb-2">Ons Werk</h2>
+                    <p class="text-gray-400">Een beeld zegt meer dan duizend woorden.</p>
+                     <div class="w-24 h-1 bg-blue-500 mx-auto mt-4"></div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="gallery-item rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://placehold.co/600x400/333333/FFFFFF?text=Voor+(Krasjes)" alt="Auto voor behandeling" class="w-full h-full object-cover">
+                    </div>
+                    <div class="gallery-item rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://placehold.co/600x400/007BFF/FFFFFF?text=Na+(Gepolijst)" alt="Auto na behandeling" class="w-full h-full object-cover">
+                    </div>
+                     <div class="gallery-item rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://placehold.co/600x400/0099FF/FFFFFF?text=Diepe+Glans" alt="Glimmende auto motorkap" class="w-full h-full object-cover">
+                    </div>
+                     <div class="gallery-item rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://placehold.co/600x400/555555/FFFFFF?text=Vies+Interieur" alt="Vies interieur" class="w-full h-full object-cover">
+                    </div>
+                     <div class="gallery-item rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://placehold.co/600x400/11CCFF/FFFFFF?text=Schoon+Interieur" alt="Schoon interieur" class="w-full h-full object-cover">
+                    </div>
+                     <div class="gallery-item rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://placehold.co/600x400/0055FF/FFFFFF?text=Showroom+Klaar" alt="Auto klaar voor showroom" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Over Ons (About Us) Section -->
+        <section id="over-ons" class="py-20 bg-gray-800">
+             <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+                 <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/1a202c/FFFFFF?text=Ons+Team" alt="Het team van GlansGarant" class="rounded-lg shadow-2xl w-full">
+                 </div>
+                 <div class="md:w-1/2 text-center md:text-left">
+                     <h2 class="text-4xl font-bold mb-4">Passie voor Perfectie</h2>
+                     <div class="w-24 h-1 bg-blue-500 mx-auto md:mx-0 mt-2 mb-6"></div>
+                     <p class="text-gray-300 mb-4 leading-relaxed">
+                         GlansGarant is geboren uit een diepe passie voor auto's. Voor ons is autopoetsen geen werk, maar een ambacht. We behandelen elke auto alsof het onze eigen is en streven naar niets minder dan perfectie. Met de beste producten en jarenlange ervaring zorgen we ervoor dat uw auto weer straalt als nooit tevoren.
+                     </p>
+                     <p class="text-gray-300 leading-relaxed">
+                         Vertrouw op ons voor een betrouwbare service en een verbluffend resultaat.
+                     </p>
+                 </div>
+             </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold mb-2">Neem Contact Op</h2>
+                    <p class="text-gray-400">Klaar voor een glanzende auto? Stuur ons een bericht!</p>
+                    <div class="w-24 h-1 bg-blue-500 mx-auto mt-4"></div>
+                </div>
+                <div class="max-w-3xl mx-auto">
+                    <form action="#" method="POST" class="bg-gray-800 p-8 rounded-lg shadow-lg">
+                        <div id="form-message" class="hidden mb-4 p-4 rounded-md"></div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <input type="text" id="name" placeholder="Uw Naam" class="bg-gray-700 text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-full">
+                            <input type="email" id="email" placeholder="Uw Email" class="bg-gray-700 text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-full">
+                        </div>
+                        <div class="mb-6">
+                             <input type="text" id="phone" placeholder="Uw Telefoonnummer (optioneel)" class="bg-gray-700 text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-full">
+                        </div>
+                        <div class="mb-6">
+                            <textarea id="message" placeholder="Uw Bericht of Vraag" rows="5" class="bg-gray-700 text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-full"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg">Verstuur Bericht</button>
+                        </div>
+                    </form>
+                     <div class="text-center mt-12 text-gray-400">
+                        <p class="text-lg font-semibold">Of bereik ons direct:</p>
+                        <p class="mt-2"><i class="fas fa-phone mr-2 text-blue-400"></i> (0182) 123 456</p>
+                        <p><i class="fas fa-envelope mr-2 text-blue-400"></i> info@glansgarant.nl</p>
+                        <p><i class="fas fa-map-marker-alt mr-2 text-blue-400"></i> Industrieweg 12, 2841 Moordrecht</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 border-t border-gray-700">
+        <div class="container mx-auto px-6 py-6 text-center text-gray-400">
+            <p>© 2025 GlansGarant. Alle rechten voorbehouden.</p>
+            <p class="text-sm">Gemaakt met <i class="fas fa-heart text-red-500"></i> in Moordrecht</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = mobileMenu.getElementsByTagName('a');
+        for (let link of mobileLinks) {
+            link.addEventListener('click', () => {
+                 mobileMenu.classList.add('hidden');
+            });
+        }
+
+        // Form submission handling
+        const contactForm = document.querySelector('form');
+        const formMessage = document.getElementById('form-message');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent actual submission
+
+            // Simple validation
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (!name || !email || !message) {
+                 formMessage.textContent = 'Vul alstublieft alle verplichte velden in.';
+                 formMessage.className = 'mb-4 p-4 rounded-md bg-red-500 text-white';
+                 formMessage.classList.remove('hidden');
+                 return;
+            }
+
+            // Display success message
+            formMessage.textContent = 'Bedankt voor uw bericht! We nemen zo snel mogelijk contact met u op.';
+            formMessage.className = 'mb-4 p-4 rounded-md bg-green-500 text-white';
+            formMessage.classList.remove('hidden');
+            
+            // Clear the form
+            contactForm.reset();
+
+            // Hide the message after a few seconds
+            setTimeout(() => {
+                formMessage.classList.add('hidden');
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
